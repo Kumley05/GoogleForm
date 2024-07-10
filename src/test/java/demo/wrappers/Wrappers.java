@@ -41,7 +41,8 @@ public class Wrappers {
         // Clear the element text, if already present and send the text
         element.clear();
         element.sendKeys(sendText);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+        
         System.out.println("Success!");
     }
 

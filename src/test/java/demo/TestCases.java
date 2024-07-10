@@ -71,7 +71,7 @@ public class TestCases {
                         Thread.sleep(3000);
                         System.out.println("update the Name");
                         // fill the name
-                        String name = "Learner";
+                        String name = "Crio Learner";
                         wrappers.inputText(driver,
                                         By.xpath("//span[normalize-space(text()) = 'Name']/following::input[@class='whsOnd zHQkBf']"),
                                         name);
@@ -80,14 +80,14 @@ public class TestCases {
                                         By.xpath("//span[normalize-space(text()) = 'Name']/following::input[@class='whsOnd zHQkBf']"));
                         String outputName = nameInput.getAttribute("data-initial-value").trim();
                         Thread.sleep(2000);
-                        if (outputName.equals(name)) {
+                        if (outputName.contains("Crio Learner")) {
                                 System.out.println("Input name is Matching:" +name);
                         } else {
                                 System.out.println("name not matching:" +outputName);
                         }
 
                         System.out.println("Update the required fields");
-                        String inputString = "To become a best QA Engineer";
+                        String inputString = "I want to be the best QA Engineer";
                         Thread.sleep(2000);
                         wrappers.inputText(driver, By.xpath(
                                         "//span[normalize-space(text()) = 'Why are you practicing Automation?']/following::textarea[@class='KHxj8b tL9Q4c']"),
@@ -100,7 +100,7 @@ public class TestCases {
                         //                 "To become a best QA Engineer",
                         //                 "Input phrase is not matching");
                         Thread.sleep(2000);
-                        if(outputPhrase.equals(inputString)){
+                        if(outputPhrase.equals("I want to be the best QA Engineer")){
                                 System.out.println("Input is correct:" +inputString);
                         }else{
                                 System.out.println("Input is incorrect: "+phraseInput);
